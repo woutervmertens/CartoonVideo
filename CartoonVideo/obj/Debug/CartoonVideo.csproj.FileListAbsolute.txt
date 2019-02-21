@@ -1,0 +1,15 @@
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\bin\Debug\CartoonVideo.exe.config
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\bin\Debug\CartoonVideo.exe
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\bin\Debug\CartoonVideo.pdb
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.csprojAssemblyReference.cache
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\View\MainWindow.g.cs
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\App.g.cs
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo_MarkupCompile.cache
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo_MarkupCompile.lref
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\View\MainWindow.baml
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.g.resources
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.Properties.Resources.resources
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.csproj.GenerateResource.cache
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.csproj.CoreCompileInputs.cache
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.exe
+C:\Users\woute\Source\repos\CartoonVideo\CartoonVideo\obj\Debug\CartoonVideo.pdb
