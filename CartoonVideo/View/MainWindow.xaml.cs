@@ -1,6 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
-namespace CartoonVideo
+namespace CartoonVideo.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

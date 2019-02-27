@@ -8,13 +8,15 @@ namespace CartoonVideo.ViewModel
 {
     class ClosestPointFinder
     {
+        public Vector3[] points;
         /// <summary>
         /// Hopefully faster method for accomplishing same goal
+        /// EDIT: NOT WORKING YET
         /// </summary>
         /// <param name="source">Constant point to check against</param>
         /// <param name="points">Array of points to check against</param>
         /// <returns>Closest Point to source</returns>
-        private Vector3 getClosestPointFromArray_Fast(Vector3 source, Vector3[] points)
+        private Vector3 getClosestPointFromArray_Fast(Vector3 source)
         {
             double sum = Double.MaxValue;
             double temp;
@@ -57,7 +59,7 @@ namespace CartoonVideo.ViewModel
         /// <param name="source">Constant Vector3 to be checked against</param>
         /// <param name="points">Array of Vector3 to check against for distance</param>
         /// <returns>Closest Vector3 to source</returns>
-        private Vector3 getClosestPointFromArray_Brute(Vector3 source, Vector3[] points)
+        public Vector3 getClosestPointFromArray_Brute(Vector3 source)
         {
             Vector3 bestVector = new Vector3(Double.MaxValue, Double.MaxValue, Double.MaxValue);
             double bestDistance = Double.MaxValue;
