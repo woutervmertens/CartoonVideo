@@ -6,6 +6,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using Microsoft.Win32;
 
 namespace CartoonVideo.ViewModel
 {
@@ -58,6 +59,11 @@ namespace CartoonVideo.ViewModel
         {
             get { return matchColor; }
         }
+        private ICommand chooseImage;
+        public ICommand ChooseImageCommand
+        {
+            get { return chooseImage; }
+        }
 
         public Main()
         {
@@ -65,6 +71,7 @@ namespace CartoonVideo.ViewModel
             //Set Commands
             randomColor = new Command(OnClickRandom);
             matchColor = new Command(OnClickMatch);
+            chooseImage = new Command(OnClickChooseImage);
 
             //Fill points
             ColorList = new ObservableCollection<LocalColor>();
@@ -92,6 +99,38 @@ namespace CartoonVideo.ViewModel
         {
             Random rnd = new Random();
             RandColor = Color.FromKnownColor((KnownColor)rnd.Next(1, 167));
+        }
+
+        private void OnClickChooseImage()
+        {
+            Bitmap img;
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+
+            
+            if(dlg.ShowDialog() == true)
+            {
+                img = new Bitmap(dlg.FileName);
+            }
+            else
+            {
+                Console.WriteLine("Image opening ended early.");
+                return;
+            }
+
+            img = EditColors(img);
+
+            SaveFileDialog dlg2 = new SaveFileDialog();
+            dlg2.Title = "Save Image";
+            dlg2.FileName = dlg.SafeFileName.Substring(0, dlg.SafeFileName.IndexOf('.')) + "Edited";
+            dlg2.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+            dlg2.DefaultExt = ".jpg";
+            if(dlg2.ShowDialog() == true)
+            {
+                img.Save(dlg2.FileName);
+            }
+            img.Dispose();
         }
 
         private void LoadVideoImages()
@@ -128,7 +167,9 @@ namespace CartoonVideo.ViewModel
 
         private Bitmap EditColors(Bitmap bmp)
         {
-            for (int y = 0; y < width; y++)
+            if (height == 0) height = bmp.Height;
+            if (width == 0) width = bmp.Width;
+            for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {

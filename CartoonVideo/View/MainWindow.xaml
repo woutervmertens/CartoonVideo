@@ -30,5 +30,6 @@
             </ListView.ItemTemplate>
             
         </ListView>
+        <Button Content="Choose Image" HorizontalAlignment="Left" Margin="258.857,222.523,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ChooseImageCommand,Mode=OneWay}"/>
     </Grid>
 </Window>
