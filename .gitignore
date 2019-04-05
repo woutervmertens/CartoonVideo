@@ -1,4 +1,4 @@
 !
-.vs/*
-!CartoonVideo/bin/*
-!CartoonVideo/obj/*
+/.vs/*
+/CartoonVideo/bin/*
+/CartoonVideo/obj/*
